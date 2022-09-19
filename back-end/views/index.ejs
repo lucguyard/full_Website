@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs"); %>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>    
+    <header><%- include("partials/header.ejs"); %></header>
+
+    <div id=container_bitcoin>
+        <h2>Cours du bitcoin</h2>
+        <p id="value-bitcoin">1 bitcoin = <%= i %> euros</p>
+    </div>
+
+    <section>
+        <p>Welcome all of you, my website purpose is to 
+            develop as far i can my skill in back-end.
+            You can create a account and see what happen
+            if you want.
+        </p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet elementum nunc. Suspendisse potenti. Nam vel urna ut tellus dapibus posuere a sit amet metus. Ut ut erat sodales nulla vulputate dignissim non et dolor. Nullam scelerisque urna diam, at lobortis dui fermentum eu. Ut quis tristique purus, non efficitur arcu. Nam euismod risus neque, eget eleifend magna sollicitudin at. Quisque in porttitor leo.
+
+            Aenean viverra efficitur tortor eget fermentum. Vestibulum iaculis dui at finibus ultrices. Mauris gravida tempus porttitor. Cras eu elementum justo. Aliquam erat volutpat. Sed facilisis risus vel lorem fringilla imperdiet. Mauris suscipit fermentum metus, et accumsan ipsum ultrices semper. In ut auctor magna. Phasellus viverra nibh bibendum, porta lorem id, efficitur lacus. Etiam nec condimentum magna, vitae euismod nisl. Vivamus sagittis molestie semper. Phasellus rutrum egestas est, a sodales quam hendrerit eget. Suspendisse tempor, quam a pulvinar aliquet, augue erat fringilla ligula, nec vulputate tellus nunc at est.
+            
+            Pellentesque non nisi eget risus eleifend gravida eu id orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi tempor quam mauris, non aliquet dui finibus vitae. In vel malesuada turpis. Fusce vestibulum, diam ut volutpat fermentum, turpis libero pulvinar augue, non varius nibh quam a nisi. Proin nec tortor in ante efficitur pretium maximus et lectus. Morbi bibendum mi nec neque tristique ultrices. Integer venenatis commodo nunc, ac posuere mi auctor id.
+            
+            Maecenas vitae leo dolor. Nunc mollis aliquam ante ut condimentum. Praesent sodales tellus non porttitor laoreet. Phasellus accumsan purus risus, interdum scelerisque ligula condimentum ac. Nunc dictum est vitae pellentesque ullamcorper. Curabitur non venenatis orci. Curabitur hendrerit tempus sapien ac ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent lacus diam, ultricies sed augue ut, ultricies molestie erat. Quisque dictum orci at varius finibus. Donec iaculis hendrerit orci id porta. Cras sed congue turpis, vitae lacinia sapien. </p>
+    </section>
+
+    <div id=container_meteo>
+        <form method="get">
+            <div>
+                <label for="name">Enter your city: </label>
+                <input type="text" name="ville" id="name" required>
+            </div>          
+             <div>
+                <input type="submit" value="validation">
+            </div>
+        </form>
+        <div id=meteo_response>
+            <% if(fetchMeteo.length == 2) { %>
+            <p> il fait <%=fetchMeteo[0] %> à <%= fetchMeteo[1] %></p>
+            <% }else{ %>
+            <p> <%= fetchMeteo %> </p>
+            <% } %>
+        </div>
+    </div>
+    <script href="script/script.js"></script>
+</body>
+</html>

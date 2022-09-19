@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs"); %>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>    
+    <header><%- include("partials/header.ejs"); %></header>
+
+   
+
+    <div id=container_register>
+        <form method="post">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="name">Email: </label>
+                <input type="text" name="email" id="email" required>
+            </div>          
+            <div>
+                <label for="name">Password: </label>
+                <input type="password" name="Password" id="password" required>
+            </div>          
+            <div>
+                <label for="name">Confirm your password: </label>
+                <input type="password" name="passwordC" id="password_Confirm" required>
+            </div>          
+          
+             <div>
+                <input type="submit" value="validation">
+            </div>
+        </form>
+</body>
+</html>

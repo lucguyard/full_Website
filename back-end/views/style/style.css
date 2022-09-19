@@ -1,0 +1,94 @@
+/*Header*/
+header
+{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#logo
+{
+    width: 25%;
+    border:2px green solid;
+
+}
+
+#logo p
+{
+    text-align: center;
+}
+#container_center
+{
+    border:2px red solid;
+    width: 50%;
+}
+
+#container_center h2
+{
+    text-align: center;
+}
+
+#container_identification
+{
+    border:2px blue solid;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+}
+
+#container_identification a
+{
+    border:2px yellow solid;
+    text-align: center;
+    width: 50%;
+    font-size: 20px;
+    color: black;
+}
+
+/*Bitcoin*/
+
+#container_bitcoin
+{
+    border: 2px black solid ;
+    width: 25%;
+    margin: 100px auto auto 0px;
+    position:fixed;
+    padding: 0;
+
+}
+
+#container_bitcoin h2 
+{
+    text-align: center;
+}
+
+
+
+#value-bitcoin
+{
+    text-align: center;
+}
+
+
+/* center section */
+section 
+{
+
+    width: 50%;
+    margin:100px auto auto 26%;
+    position: fixed;
+}
+
+/* meteo*/
+
+#container_meteo
+{
+    position: fixed;
+    width: 25%;
+    margin:100px auto auto 76%;
+    border: 1px black solid ;
+
+}
