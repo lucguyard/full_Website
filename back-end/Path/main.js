@@ -3,12 +3,13 @@ const router = express.Router();
 const { response } = require("express");
 
 require('dotenv').config();
-const getMainFunction = require("../function/mainPageFunction");
+const mainFunction = require("../function/mainPageFunction");
+const registerFunction = require("../function/registerPageFunction");
 
 
 router.route("/")
     .get(
-       getMainFunction.fetchRequest        
+       mainFunction.fetchRequest        
         )
     .post()                     
 
@@ -19,9 +20,9 @@ router.route("/main")
     })
     .post()
 
-/*router.route("/register")
+router.route("/register")
     .get((req,res) => {res.render("../views/register.ejs")})
-    .post()*/
+    .post(registerFunction.RegisterClient)
 
 module.exports = router ; 
 

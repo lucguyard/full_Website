@@ -16,6 +16,10 @@ const app = express();
 const route = require("./Path/main.js");
 require('dotenv').config();
 
+const mongoDb = require ("mongoose");
+const {serverDB , RegisterDb} = require("./model/mongodb")
+mongoDb.connect(serverDB, {useNewUrlParser: true})
+
 
 
 
@@ -37,5 +41,3 @@ let port = process.env.PORT || 4001 ;
 app.listen(port, () => {
     console.log("You're connected to localHost " + port)
 })
-
-
